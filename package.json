@@ -3,5 +3,14 @@
   "version": "1.2.0",
   "description": "🍱 Minimalist, elegant and hackable startpage inspired by the Bento box!",
   "author": "Miguel Ávila",
-  "license": "ISC"
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "start": "web-ext run",
+    "lint": "web-ext lint",
+    "build": "web-ext build --overwrite-dest"
+  },
+  "devDependencies": {
+    "web-ext": "^10.7.0"
+  }
 }

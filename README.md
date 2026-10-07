@@ -1,21 +1,23 @@
-![image](assets/img/header.png)
+<p align="center">
+  <img src="assets/icons/tiffin.svg" alt="Tiffin" width="88" />
+</p>
 
-<p style="margin: -20px 0 30px">
-  <a href="https://www.buymeacoffee.com/migueravila" target="_blank" style='margin-right:0px; margin-top:5px'>
-    <img align="center" src="https://github.com/migueravila/Bento/blob/master/assets/img/donation.png" alt="donation" height="35px" />
-  </a>
+<h1 align="center">Tiffin</h1>
 
-  <a href="https://migueravila.github.io/Bento/" target="_blank" style='margin-right:0px; margin-top:5px'>
-    <img align="center" src="https://github.com/migueravila/Bento/blob/master/assets/img/live.png" alt="live-preview" height="35px" />
-  </a>
+<p align="center">
+  <em>Bento, one tier up.</em><br />
+  A typographic new tab and home page for Firefox.
 </p>
 
 <br />
+
+Tiffin is the next step for [Bento](https://github.com/migueravila/Bento) by Miguel Ávila. Bento gave it the layout. Tiffin stacks a tier on top with a type-led redesign ("Couture"), a clock whose weight follows the day, search that jumps to your links, and a native Firefox extension that replaces the new tab and home page.
 
 ## 👇 Index
 - [✨ Features](#-features)
 - [🚀 Usage](#-usage)
 - [🎨 Customization](#-customization)
+- [🍱 Credits](#-credits)
 
 ## ✨ Features
 
@@ -41,11 +43,11 @@
 
 ### 🦊 As a Firefox Extension (new tab + home page)
 
-This repo is also a Firefox WebExtension (`manifest.json`) that replaces the new tab and home page.
+Tiffin is a Firefox WebExtension (`manifest.json`) that replaces the new tab and home page.
 
 ```bash
 npm install
-npm start        # launches a fresh Firefox profile with Bento loaded; auto-reloads on file changes
+npm start        # launches a fresh Firefox profile with Tiffin loaded; auto-reloads on file changes
 npm run lint     # validate the extension
 npm run build    # zip into web-ext-artifacts/
 ```
@@ -61,17 +63,17 @@ You can use different Add-ons/Extensions for it
 
 ### 🐬 In a Docker Container
 
-You can run Bento in a Docker Container, either with `docker run`, or with the included `docker-compose` file.
+You can run Tiffin in a Docker container, either with `docker run`, or with the included `docker-compose` file.
 
 #### Docker run
- 1. Clone this repo to pull the config.js file: `git clone https://github.com/migueravila/Bento/`
- 2. Run the following `docker` command, providing the path to the config.js file, changing port mappings if needed.
- 3. `# docker run -it -d -p 80:80 -v <config.js location>:/usr/share/nginx/html/config.js lewisdoesstuff/bento`
+ 1. Clone this repo: `git clone https://github.com/RohanGupta15/Bento-homepage`
+ 2. Build the image: `docker build -t tiffin .`
+ 3. Run it with your config, changing the port mapping if needed: `docker run -d -p 80:80 -v <config.js location>:/usr/share/nginx/html/config.js tiffin`
 
 #### docker-compose
-  1. Clone this repo with `git clone https://github.com/migueravila/Bento/`
+  1. Clone this repo with `git clone https://github.com/RohanGupta15/Bento-homepage`
   2. Edit port mappings, and provide a path to the config.js file in `docker-compose.yml`
-  3. `cd` into the cloned repo, then run `# docker-compose -d up` to start. 
+  3. `cd` into the cloned repo, then run `docker compose up -d --build` to start.
 
 ## 🎨 Customization
 
@@ -88,7 +90,7 @@ Everything lives in `config.js`. While `npm start` is running, saving a file rel
 | `bentoLayout` | `'bento'` (tiles + lists), `'lists'` (all lists), `'buttons'` (all tiles). |
 | `theme` | `'auto'` follows the OS; `'dark'` or `'light'` forces one. |
 | `accentDark` / `accentLight` | The single accent colour (clock colon, focus rings, day dot) per theme. |
-| `searchUrl` | Fallback search URL (`%s` = query) when Bento runs as a plain web page rather than the extension. |
+| `searchUrl` | Fallback search URL (`%s` = query) when Tiffin runs as a plain web page rather than the extension. |
 | `weatherUnit` | `'C'` or `'F'`. |
 | `trackLocation` | Use the browser's location for weather; otherwise `defaultLatitude` / `defaultLongitude`. |
 | `locationName` | Label under the weather. `''` hides it. |
@@ -124,3 +126,7 @@ firstlistsContainer: [
 ### 💛 Colors and type
 
 Colours are CSS variables at the top of `app.css`: light theme on `:root`, dark on `:root[data-theme='dark']`. Fonts are declared with `@font-face` at the very top and live in `assets/fonts/` (SIL Open Font License).
+
+## 🍱 Credits
+
+Tiffin is built on [Bento](https://github.com/migueravila/Bento) by [Miguel Ávila](https://github.com/migueravila) and its contributors, and stays under the same [GPL-3.0](License) licence. Fonts: Imbue, Petrona, Onest and Reddit Mono (SIL Open Font License). Icons: [Lucide](https://lucide.dev). Weather: [Open-Meteo](https://open-meteo.com).

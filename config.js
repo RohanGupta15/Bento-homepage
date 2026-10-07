@@ -1,6 +1,6 @@
-// ╔╗ ╔═╗╔╗╔╔╦╗╔═╗
-// ╠╩╗║╣ ║║║ ║ ║ ║
-// ╚═╝╚═╝╝╚╝ ╩ ╚═╝
+// ╔╦╗╦╔═╗╔═╗╦╔╗╔
+//  ║ ║╠╣ ╠╣ ║║║║
+//  ╩ ╩╚  ╚  ╩╝╚╝
 // ┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
 // │  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
 // └─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
@@ -33,7 +33,7 @@ const CONFIG = {
 	accentLight: '#4F6BED', // accent on the light theme
 
 	// Search: Firefox's default engine is used when running as the extension.
-	// This template is the fallback when Bento runs as a plain web page.
+	// This template is the fallback when Tiffin runs as a plain web page.
 	searchUrl: 'https://duckduckgo.com/?q=%s',
 
 	// Weather (Open-Meteo, no API key needed)
